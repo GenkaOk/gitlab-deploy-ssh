@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag genkaok/gitlab-deploy-ssh:$(date +%s)
+      run: docker build . --file Dockerfile --tag genkaok/gitlab-deploy-ssh:$(date +%s) && docker push genkaok/gitlab-deploy-ssh:$(date +%s)
